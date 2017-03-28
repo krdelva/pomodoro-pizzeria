@@ -13,6 +13,7 @@ import {mapStateToProps, mapDispatchToProps} from '../store.js';
           this.props.cart.map((ele, i) => {
             return  <div key={this.props.cart[i].id}>
                       <li>{ele.item}</li>
+                      <p>{ele.quantity}</p>
                       <button onClick={() => this.props.delItemCart(this.props.cart[i].id)}>Del</button>
                     </div>
           })
