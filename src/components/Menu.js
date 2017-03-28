@@ -17,12 +17,34 @@ class Menu extends Component {
   }
   render() {
     return (
-    <div>
-      <ul>
-        <li onClick={() => this.addCart('Strawberry', 'S')}>Strawberry</li>
-        <li onClick={() => this.addCart('Chocolate', 'C')}>Chocolate</li>
-        <li onClick={() => this.addCart('Vanilla', 'V')}>Vannilla</li>
-      </ul>
+    <div className='row'>
+        <div className='col-md-4'>
+          <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Strawberry</p></div></div>
+        </div>
+        <div className='col-md-4'>
+          <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>
+        </div>
+        <div className='col-md-4'>
+          <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>
+        </div>
+        <div className='col-md-4'>
+          <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>
+        </div>
+        <div className='col-md-4'>
+          <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>
+        </div>
+        <div className='col-md-4'>
+          <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>
+        </div>
+        <div className='col-md-4'>
+          <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>
+        </div>
+        <div className='col-md-4'>
+          <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>
+        </div>
+        <div className='col-md-4'>
+          <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>
+        </div>
     </div>
   );
   }

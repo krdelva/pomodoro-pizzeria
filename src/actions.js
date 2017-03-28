@@ -3,7 +3,8 @@ import {
     CLEAR,
     DELETE,
     ADD_EXISTING,
-    DELETE_EXISTING
+    DELETE_EXISTING,
+    ADD_ORDER
 } from './types.js';
 import {store} from './store.js';
 
@@ -43,7 +44,7 @@ export const clearCartAct = () => {
   }
 }
 
-export const delItem = (id) => {
+export const delItem = (id, key) => {
   let i = 0;
   while (id !== store.getState().cart[i].id) {
     i++;
@@ -54,11 +55,21 @@ export const delItem = (id) => {
       type: DELETE_EXISTING,
       id: ++idNum,
       i,
-      quantity: --qty
+      quantity: --qty,
+      key
     }
   }
   return {
     type: DELETE,
     id
+  }
+}
+
+export const addOrder = (name, address, number) => {
+  return {
+    type: ADD_ORDER,
+    name,
+    address,
+    number
   }
 }
