@@ -22,10 +22,10 @@ class Menu extends Component {
           <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Strawberry</p></div></div>
         </div>
         <div className='col-md-4'>
-          <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>
+          <div className='thumbnail' onClick={() => this.addCart('Chocolate', 'Ch')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>
         </div>
         <div className='col-md-4'>
-          <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>
+          <div className='thumbnail' onClick={() => this.addCart('Vanilla', 'V')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>
         </div>
         <div className='col-md-4'>
           <div className='thumbnail' onClick={() => this.addCart('Strawberry', 'S')}><img src={require("../images/strawberry.jpg")} alt='Strawberry' /><div className='caption'><p>Straberry</p></div></div>

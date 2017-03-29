@@ -9,10 +9,9 @@ import {Link} from 'react-router-dom';
     return (
       <div>
         <h1>Cart</h1>
-        <button type="button" className="btn btn-secondary btn-sm" onClick={() => this.props.clearCart()}>Clear Cart!</button>
         <table className='table table-stripped'>
         <thead>
-          <tr><th>Item</th><th>Quantity</th><th>Price</th></tr>
+          <tr><th>Item</th><th>Quantity</th><th>Price</th><th><span className="glyphicon glyphicon-edit"></span></th></tr>
         </thead>
         <tbody>
         {
@@ -25,10 +24,12 @@ import {Link} from 'react-router-dom';
                     </tr>
           })
         }
-        <tr className='active'><td><strong>Total: ${this.props.qty * 2.50}</strong></td><td></td><td></td></tr>
+        <tr className='active'><td><strong>Total: </strong></td><td></td><td><strong>${this.props.qty * 2.50}</strong></td><td>
+        <button type="button" className="btn btn-warning btn-md" onClick={() => this.props.clearCart()}>Clear Cart!</button>
+        </td></tr>
         </tbody>
         </table>
-        <button type="button" className="btn btn-primary btn-lg"><Link to='/confirm'>Pay Now!</Link></button>
+        <button type="button" className="btn btn-success btn-lg"><Link to='/confirm'>Pay Now!</Link></button>
       </div>
     );
   }
