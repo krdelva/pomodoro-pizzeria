@@ -8,11 +8,11 @@ class Home extends Component {
     return (
         <div className='row'>
           <Carousel />
-          <div className='col-xs-8 col-md-8'>
+          <div className='col-md-8'>
             <h3>Welcome to ****** ice cream shop online!
             We hope you enjoy your visit.</h3>
           </div>
-          <div className='col-xs-8 col-md-4'>
+          <div className='col-md-4'>
             <div className="panel panel-default">
               <div className="panel-heading">News!!!</div>
               <div className="panel-body">Happy hour on **/**/**</div>
