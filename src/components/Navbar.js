@@ -4,13 +4,14 @@ import {mapStateToProps, mapDispatchToProps} from '../store.js';
 import {Link} from 'react-router-dom';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
 
+
 class NavbarComp extends Component {
   render() {
     return (
       <Navbar collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link className='nav-link' to='/'><span className="glyphicon glyphicon-ice-lolly"></span></Link>
+            <div className='media'><Link className='nav-link' to='/'><span className='glyphicon glyphicon-home'></span></Link></div>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>

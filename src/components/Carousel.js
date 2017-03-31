@@ -7,13 +7,13 @@ import {React_Bootstrap_Carousel as ReactBootstrapCarousel} from 'react-bootstra
 class Carousel extends Component {
   render() {
     return (
-      <div style={{height:500,margin:20}}>
+      <div style={{height:500,margin:50}}>
        <ReactBootstrapCarousel animation={true} className="carousel-fade">
           <div style={{height:500,width:"100%",backgroundColor:"skyblue"}}>
-            <img src={require('../images/icecream1.JPG')} alt='Ice Cream 1' />
+            <img src={require('../images/pomodoro1.jpg')} alt='Pomodoro 1' />
           </div>
           <div style={{height:500,width:"100%",backgroundColor:"aqua"}}>
-            <img src={require('../images/icecream2.jpg')} alt='Ice Cream 2' />
+            <img className='responsive' src={require('../images/pomodoro2.jpg')} alt='Pomodoro 2' />
           </div>
           <div style={{height:500,width:"100%",backgroundColor:"lightpink"}}>
 

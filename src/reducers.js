@@ -1,27 +1,13 @@
 import {
-  ADD,
-  CLEAR,
-  DELETE,
-  ADD_EXISTING,
-  DELETE_EXISTING,
-  ADD_ORDER
+  ADD_ITEM
 } from './types.js';
+import {menu_data} from './components/menu.json';
 
 
-const addToCartReducer = (state = {cart: [], qty: 0, user: {}}, action) => {
+const addToCartReducer = (state = {cart: [], user: {}, menu: menu_data, totalSum: 0}, action) => {
   switch (action.type) {
-    case ADD:
-      return {...state, cart: [...state.cart, {key: action.key, item: action.item, id: action.id, quantity: action.quantity}], qty: state.qty + 1};
-    case ADD_EXISTING:
-      return {...state, cart: state.cart.filter(ele => action.key !== ele.key).concat([{key: action.key, item: action.item, id: action.id, quantity: action.quantity}]), qty:state.qty + 1};
-    case DELETE:
-      return {...state, cart: state.cart.filter(ele => action.id !== ele.id), qty: state.qty - 1};
-    case DELETE_EXISTING:
-      return {...state, cart: state.cart.filter(ele => action.key !== ele.key).concat([{...state.cart[action.i], id: action.id, quantity: action.quantity}]), qty:state.qty - 1 };
-    case CLEAR:
-      return {...state, cart: [], qty: 0};
-    case ADD_ORDER:
-      return {...state, user: { id: action.idUser, name: action.name, address: action.address, number: action.number } };
+    case ADD_ITEM:
+      return {...state, cart: state.cart.filter(ele => ele.item !== action.item).concat([{item: action.item, price: action.price, quantity: action.quantity}]), totalSum: action.addedSum};
     default:
       return state;
   }

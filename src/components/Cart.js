@@ -6,30 +6,37 @@ import {Link} from 'react-router-dom';
 
  class Cart extends Component {
   render() {
+    let toRender = undefined;
+    if (this.props.cart.length === 0) {
+      toRender = <h1 className='text-center'>Empty Cart</h1>
+    } else {
+      toRender = this.props.cart.map((ele, i) => {
+                  return  <tr key={i}>
+                            <td>{ele.item}</td>
+                            <td>{ele.quantity}</td>
+                            <td>${ele.price}</td>
+                            <td><button type="button" className="btn btn-danger btn-sm" onClick={() => this.props.delItemCart(this.props.cart[i].id, this.props.cart[i].key)}>Delete Item</button></td>
+                          </tr>
+                  });
+    }
     return (
-      <div>
-        <h1>Cart</h1>
+      <div className='container-fluid'>
+        <h1 className='text-center'><strong>Cart</strong></h1>
+        <hr/>
+        <br/>
         <table className='table table-stripped'>
         <thead>
           <tr><th>Item</th><th>Quantity</th><th>Price</th><th><span className="glyphicon glyphicon-edit"></span></th></tr>
         </thead>
         <tbody>
-        {
-          this.props.cart.map((ele, i) => {
-            return  <tr key={this.props.cart[i].id}>
-                      <td>{ele.item}</td>
-                      <td>{ele.quantity}</td>
-                      <td>${ele.quantity * 2.50}</td>
-                      <td><button type="button" className="btn btn-danger btn-sm" onClick={() => this.props.delItemCart(this.props.cart[i].id, this.props.cart[i].key)}>Delete Item</button></td>
-                    </tr>
-          })
-        }
-        <tr className='active'><td><strong>Total: </strong></td><td></td><td><strong>${this.props.qty * 2.50}</strong></td><td>
+          {toRender}
+        <tr className='active'><td><strong>Total: </strong></td><td></td><td><strong>RD${this.props.totalSum}</strong></td><td>
         <button type="button" className="btn btn-warning btn-md" onClick={() => this.props.clearCart()}>Clear Cart!</button>
         </td></tr>
         </tbody>
         </table>
-        <button type="button" className="btn btn-success btn-lg"><Link to='/confirm'>Pay Now!</Link></button>
+        <hr/>
+        <div className='text-center'><button type="button" className="btn btn-success btn-lg align-center"><Link to='/confirm'>Pay Now!</Link></button></div>
       </div>
     );
   }
