@@ -1,6 +1,6 @@
 import {createStore} from 'redux';
 import addToCartReducer from './reducers.js';
-import {addCart} from './actions.js';
+import {addCart, removeCart, clearCart} from './actions.js';
 
 export const store = createStore(addToCartReducer);
 
@@ -14,8 +14,14 @@ export const mapStateToProps = (state) => {
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-    addCart: (item, price, quantity, menu_type, element, index) => {
-      dispatch(addCart(item, price, quantity, menu_type, element, index))
+    addCart: (element) => {
+      dispatch(addCart(element))
+    },
+    removeCart: (element) => {
+      dispatch(removeCart(element))
+    },
+    clearCart: () => {
+      dispatch(clearCart())
     }
   };
 }

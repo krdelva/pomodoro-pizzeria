@@ -18,6 +18,12 @@ class Menu extends Component {
              <NavItem eventKey="second">
                Crostoni
              </NavItem>
+             <NavItem eventKey="third">
+               Pizza
+             </NavItem>
+             <NavItem eventKey="fourth">
+               Pizza Bianca
+             </NavItem>
            </Nav>
          </Col>
          <Col sm={8}>
@@ -47,6 +53,42 @@ class Menu extends Component {
                <hr/><br/>
                {
                  menu_data.Crostoni.map((ele, i) =>
+                 <Panel key={i} header={<div className='row'><strong>
+                   <p className='col-md-8'>{ele.item}</p>
+                     <p className='col-md-2'>RD${ele.price}</p></strong>
+                       <button onClick={() => this.props.addCart(ele)}
+                           type='button' className='btn'><span
+                               className='col-md-2 glyphicon glyphicon-plus'></span></button></div>}>
+                   {ele.description}
+                 </Panel>
+                 )
+                }
+               </div>
+             </Tab.Pane>
+             <Tab.Pane eventKey="third">
+               <div className='container-fluid'>
+               <h1 className='text-center'>Pizza</h1>
+               <hr/><br/>
+               {
+                 menu_data.Pizza.map((ele, i) =>
+                 <Panel key={i} header={<div className='row'><strong>
+                   <p className='col-md-8'>{ele.item}</p>
+                     <p className='col-md-2'>RD${ele.price}</p></strong>
+                       <button onClick={() => this.props.addCart(ele)}
+                           type='button' className='btn'><span
+                               className='col-md-2 glyphicon glyphicon-plus'></span></button></div>}>
+                   {ele.description}
+                 </Panel>
+                 )
+                }
+               </div>
+             </Tab.Pane>
+             <Tab.Pane eventKey="fourth">
+               <div className='container-fluid'>
+               <h1 className='text-center'>Pizza Bianca</h1>
+               <hr/><br/>
+               {
+                 menu_data.PizzaBianca.map((ele, i) =>
                  <Panel key={i} header={<div className='row'><strong>
                    <p className='col-md-8'>{ele.item}</p>
                      <p className='col-md-2'>RD${ele.price}</p></strong>

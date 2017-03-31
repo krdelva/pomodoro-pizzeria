@@ -71,6 +71,24 @@
               "description": "Prosciutto and Melon",
               "price": 420,
               "quantity": 0
+            },
+            {
+              "item": "Burrata con Prosciutto Crudo y Rucula",
+              "description": "Burrata Cheese with Prosciutto and Rocket Salad",
+              "price": 460,
+              "quantity": 0
+            },
+            {
+              "item": "Carpaccio con Rúcula y Parmesano",
+              "description": "Carpaccio with Rocket Salad and Parmesan",
+              "price": 480,
+              "quantity": 0
+            },
+            {
+              "item": "Affettato Misto",
+              "description": "Embutidos Especiales y Quesos Italianos Mixtos/Plancha Apéro\nMixed Italian Delicatessen and Cheese",
+              "price": 490,
+              "quantity": 0
             }
           ]
       },
@@ -93,5 +111,63 @@
           "price": 220,
           "quantity": 0
         }
-      ]
+      ],
+  "Pizza": [
+      {
+        "item": "Margherita",
+        "description": "Tomate y Mozzarella\nTomato and Mozzarella",
+        "price": 300,
+        "quantity": 0
+      },
+      {
+        "item": "Pesto",
+        "description": "Tomate, Mozzarella y Pesto\nTomato, Mozzarella and Pesto",
+        "price": 330,
+        "quantity": 0
+      },
+      {
+        "item": "Italiana",
+        "description": "Tomate Fresco, Queso Fresco y Rucula\nFresh Tomato, Fresh Cheese and Rocket Salad",
+        "price": 350,
+        "quantity": 0
+      },
+      {
+        "item": "Caprese",
+        "description": "Mozzarella, Tomate Fresco y Basilico\nMozzarella, Fresh Tomato and Basil",
+        "price": 360,
+        "quantity": 0
+      },
+      {
+        "item": "Spinaci",
+        "description": "Tomate, Mozzarella y Espinacas\nTomato, Mozzarella and Spinach",
+        "price": 370,
+        "quantity": 0
+      },
+      {
+        "item": "Patatatine",
+        "description": "Tomate, Mozzarella y Papas Fritas\nTomato, Mozzarella and French Fries",
+        "price": 380,
+        "quantity": 0
+      }
+    ],
+  "PizzaBianca": [
+    {
+      "item": "Papo Especial",
+      "description": "Mozzarella, Jamón, Queso Especial y Maíz",
+      "price": 420,
+      "quantity": 0
+    },
+    {
+      "item": "Burrata",
+      "description": "Burrata, Tomate Cherry y Basilico\nBurrata Cheese, Cherry Tomato and Basil",
+      "price": 450,
+      "quantity": 0
+    },
+    {
+      "item": "Pancetta",
+      "description": "Mozzarella, Provola Ahumada, Pancetta Italiana y Orégano\nMozzarella, Smoked Provola, Italian Bacon and Orégano",
+      "price": 490,
+      "quantity": 0
+    }
+  ]
 }

@@ -14,8 +14,8 @@ import {Link} from 'react-router-dom';
                   return  <tr key={i}>
                             <td>{ele.item}</td>
                             <td>{ele.quantity}</td>
-                            <td>${ele.price}</td>
-                            <td><button type="button" className="btn btn-danger btn-sm" onClick={() => this.props.delItemCart(this.props.cart[i].id, this.props.cart[i].key)}>Delete Item</button></td>
+                            <td>${ele.price * ele.quantity}</td>
+                            <td><button type="button" className="btn btn-danger btn-sm" onClick={() => this.props.removeCart(ele)}>Delete Item</button></td>
                           </tr>
                   });
     }
